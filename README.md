@@ -60,6 +60,9 @@ php 7.x running on the server.
 
     - Enable the monitor to start automatically after reboot:
       sudo systemctl enable fdmr_mon
+    启动前，执行以下命令更新openssl：
+    pip uninstall pyopenssl cryptography
+    pip install --no-cache-dir pyopenssl cryptography
 
     - You can start, stop, or restart with the next commands:
       sudo systemctl start fdmr_mon
